@@ -1,0 +1,5 @@
+Django==4.0.3
+djangorestframework==3.13.1
+requests==2.27.1
+django-environ==0.8.1
+responses==0.20.0

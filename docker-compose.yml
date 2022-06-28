@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+    tuto:
+        image: first/tuto
+        build: .
+        restart: unless-stopped
+        environment: 
+            - BASE_URL_PAGE_SPEED=https://www.googleapis.com/pagespeedonline/v5/
+        
+        command: sh -c "chmod +x ./entrypoint.sh && ./entrypoint.sh"
+
+        ports:
+            - 12000:5000
+        volumes:
+            - .:/code
+
+volumes:
+    postgresql:
+    pgadmin:
+    # mysql:
